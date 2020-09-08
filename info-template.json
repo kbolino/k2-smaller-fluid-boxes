@@ -1,0 +1,10 @@
+{
+  "name": "__NAME__",
+  "version": "__VERSION__",
+  "title": "K2 Smaller Fluid Boxes",
+  "author": "kbolino",
+  "factorio_version": "0.18",
+  "dependencies": [
+    "? Krastorio2 >= 1.0.0"
+  ]
+}
