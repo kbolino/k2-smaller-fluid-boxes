@@ -35,7 +35,8 @@ The affected buildings as of Krastorio2 1.0.4 are:
 - Matter Assembler
 - Matter Plant
 
-## Building
+## Building the Mod
 
 To build the mod from source, you will need to install `jq`, `zip`, and
-`make`. Then run `make clean zip`.
+`make`. Then run `make clean zip` and the properly named and structured
+zip file for the mod will be created in the `output` directory.

@@ -25,12 +25,12 @@ MAKEFLAGS += --no-builtin-rules
 .PHONY: zip
 zip: $(OUTPUT_DIR)/$(MOD_ZIP_FILE)
 
-# phony targets
+# clean target
 .PHONY: clean
 clean:
 	@$(CMD_RM_RF) $(OUTPUT_DIR)
 
-# dependent targets
+# dependent targets for zip
 $(OUTPUT_DIR)/$(MOD_ZIP_FILE): $(ZIP_OUTPUT_DIR) $(ZIP_OUTPUT_DIR)/info.json
 	@$(CMD_CD) $(OUTPUT_DIR) && $(CMD_ZIP_RQ) $(MOD_ZIP_FILE) $(MOD_ZIP_DIR)
 
