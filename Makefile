@@ -1,6 +1,6 @@
 # mod properties
 MOD_NAME := k2-smaller-fluid-boxes
-MOD_VERSION := 0.1.0
+MOD_VERSION := 0.1.1
 MOD_CONTENTS := data-updates.lua
 
 # filename/path vars
@@ -11,7 +11,7 @@ ZIP_OUTPUT_DIR := $(OUTPUT_DIR)/$(MOD_ZIP_DIR)
 
 # commands
 CMD_CD ?= cd
-CMD_CP_R ?= cp -r
+CMD_CP_PARENTS ?= cp --parents
 CMD_JQ ?= jq
 CMD_MKDIR_P ?= mkdir -p
 CMD_RM_RF ?= rm -rf
@@ -37,7 +37,7 @@ $(OUTPUT_DIR)/$(MOD_ZIP_FILE): $(ZIP_OUTPUT_DIR) $(ZIP_OUTPUT_DIR)/info.json
 
 $(ZIP_OUTPUT_DIR): $(MOD_CONTENTS)
 	$(CMD_MKDIR_P) $@
-	$(CMD_CP_R) $^ $@
+	$(CMD_CP_PARENTS) $^ $@
 	$(CMD_TOUCH) $@
 
 $(ZIP_OUTPUT_DIR)/info.json: info-template.json
